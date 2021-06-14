@@ -1,0 +1,22 @@
+{
+  "name": "cherry-api-wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper for the ch$rry API.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clapann/cherry-api-wrapper.git"
+  },
+  "author": "clap#0007",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clapann/cherry-api-wrapper/issues"
+  },
+  "homepage": "https://github.com/clapann/cherry-api-wrapper#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
