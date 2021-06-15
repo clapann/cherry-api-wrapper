@@ -28,6 +28,8 @@ You request a certain method from the module -> module interacts with https://ap
 ## 🎈 Example <a name = "example"></a>
 
 ```js
+const API = require('cherry-api-wrapper')
+
 let eightball = await new API.Fun().eightball('Will i be successful?')
 console.log(eightball) // { status: 200, question: 'Will i be successful?', answer: 'Yes - definitely.' }
 
