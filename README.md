@@ -15,6 +15,7 @@
 
 - [How it works](#working)
 - [Examples](#example)
+- [Methods](#methods)
 - [Built with](#built_using)
 - [Made by](#authors)
 
@@ -32,6 +33,26 @@ console.log(eightball) // { status: 200, question: 'Will i be successful?', answ
 
 let img = await new API.Images().blush()
 console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blush/blush_38.gif', id: 38 }
+```
+
+## 🔄 Methods <a name = "methods"></a>
+
+# Images
+```js
+API.Images().blush()
+API.Images().cry()
+API.Images().hug()
+API.Images().kiss()
+API.Images().pat()
+API.Images().slap()
+```
+
+# Fun
+```js
+API.Fun().eightball(question)
+API.Fun().advice()
+API.Fun().fortune()
+API.Fun().insults()
 ```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
