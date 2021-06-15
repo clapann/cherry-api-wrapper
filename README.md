@@ -62,4 +62,4 @@ API.Fun().insults()
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@clap](https://dsc.bio/clap) - Developer of the ch$rry API and wrapper and discord bot.
+- [@clap](https://dsc.bio/clap) - Developer of the ch$rry API, wrapper and discord bot.
