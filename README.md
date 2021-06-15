@@ -16,6 +16,7 @@
 - [How it works](#working)
 - [Examples](#example)
 - [Methods](#methods)
+- [Rate limits](#ratelimits)
 - [Built with](#built_using)
 - [Made by](#authors)
 
@@ -39,7 +40,7 @@ console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blus
 
 ## 🔄 Methods <a name = "methods"></a>
 
-# Images
+# 📷 Images
 ```js
 API.Images().blush()
 API.Images().cry()
@@ -49,13 +50,20 @@ API.Images().pat()
 API.Images().slap()
 ```
 
-# Fun
+# 🧸 Fun
 ```js
 API.Fun().eightball(question)
 API.Fun().advice()
 API.Fun().fortune()
 API.Fun().insults()
 ```
+
+# ⚠️ Rate Limits <a name = "ratelimits"></a>
+
+The ch$rry API allows you to make a request per second to prevent spam. If you make a request while your on the 1 second rate limit it will return a 429 status code
+
+"The HTTP 429 Too Many Requests response status code indicates the user has sent too many requests in a given amount of time."
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
