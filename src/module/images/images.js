@@ -2,33 +2,81 @@ const fetch = require(`node-fetch`);
 
 module.exports = class Images {
 
-    async blush() {
-        const res = await fetch('https://api.cherrybot.xyz/images/blush');
+    async blush(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/blush?key=${apikey}`);
         return await (await res.json())
     }
 
-    async cry() {
-        const res = await fetch('https://api.cherrybot.xyz/images/cry');
+    async cry(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/cry?key=${apikey}`);
         return await (await res.json())
     }
 
-    async hug() {
-        const res = await fetch('https://api.cherrybot.xyz/images/hug');
+    async hug(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/hug?key=${apikey}`);
         return await (await res.json())
     }
 
-    async kiss() {
-        const res = await fetch('https://api.cherrybot.xyz/images/kiss');
+    async kiss(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/kiss?key=${apikey}`);
         return await (await res.json())
     }
 
-    async pat() {
-        const res = await fetch('https://api.cherrybot.xyz/images/pat');
+    async pat(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/pat?key=${apikey}`);
         return await (await res.json())
     }
 
-    async slap() {
-        const res = await fetch('https://api.cherrybot.xyz/images/slap');
+    async slap(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/slap?key=${apikey}`);
         return await (await res.json())
     }
 

@@ -17,6 +17,7 @@
 - [Examples](#example)
 - [Methods](#methods)
 - [Rate limits](#ratelimits)
+- [API Keys](#keys)
 - [Built with](#built_using)
 - [Made by](#authors)
 
@@ -30,11 +31,12 @@ You request a certain method from the module -> module interacts with https://ap
 
 ```js
 const API = require('cherry-api-wrapper')
+const apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-let eightball = await new API.Fun().eightball('Will i be successful?')
+let eightball = await new API.Fun().eightball('Will i be successful?', apikey)
 console.log(eightball) // { status: 200, question: 'Will i be successful?', answer: 'Yes - definitely.' }
 
-let img = await new API.Images().blush()
+let img = await new API.Images().blush(apikey)
 console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blush/blush_38.gif', id: 38 }
 ```
 
@@ -42,28 +44,30 @@ console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blus
 
 # 📷 Images
 ```js
-API.Images().blush()
-API.Images().cry()
-API.Images().hug()
-API.Images().kiss()
-API.Images().pat()
-API.Images().slap()
+API.Images().blush(apikey)
+API.Images().cry(apikey)
+API.Images().hug(apikey)
+API.Images().kiss(apikey)
+API.Images().pat(apikey)
+API.Images().slap(apikey)
 ```
 
 # 🧸 Fun
 ```js
-API.Fun().eightball(question)
-API.Fun().advice()
-API.Fun().fortune()
-API.Fun().insults()
+API.Fun().eightball(question, apikey)
+API.Fun().advice(apikey)
+API.Fun().fortune(apikey)
+API.Fun().insults(apikey)
 ```
 
 # ⚠️ Rate Limits <a name = "ratelimits"></a>
 
 The ch$rry API allows you to make a request per second to prevent spam. If you make a request while your on the 1 second rate limit it will return a 429 status code
-
 "The HTTP 429 Too Many Requests response status code indicates the user has sent too many requests in a given amount of time."
 
+# 🔒 API Keys <a name = "keys"></a>
+
+To apply for a ch$rry API key join our Discord server (https://cherrybot.xyz/discord) and make a ticket explaining what you are using the API key for! (We are accepting easily and not being strict about it and youll probably get accepted within an hour or two.)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
