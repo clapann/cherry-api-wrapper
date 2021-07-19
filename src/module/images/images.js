@@ -67,6 +67,19 @@ module.exports = class Images {
         return await (await res.json())
     }
 
+    async punch(apikey) {
+        if(!apikey) {
+            let message = {
+                "status": 400,
+                "error": "You didnt provide an API key."
+            }
+            return message
+        }
+
+        const res = await fetch(`https://api.cherrybot.xyz/images/punch?key=${apikey}`);
+        return await (await res.json())
+    }
+
     async slap(apikey) {
         if(!apikey) {
             let message = {

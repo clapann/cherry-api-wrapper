@@ -38,6 +38,9 @@ console.log(eightball) // { status: 200, question: 'Will i be successful?', answ
 
 let img = await new API.Images().blush(apikey)
 console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blush/blush_38.gif', id: 38 }
+
+let data = await new API.Valorant().userInfo(apikey, 'Example#0000')
+console.log(data) // { status: 200, data: [Object] }
 ```
 
 ## 🔄 Methods <a name = "methods"></a>
@@ -49,6 +52,7 @@ API.Images().cry(apikey)
 API.Images().hug(apikey)
 API.Images().kiss(apikey)
 API.Images().pat(apikey)
+API.Images().punch(apikey)
 API.Images().slap(apikey)
 ```
 
@@ -58,6 +62,11 @@ API.Fun().eightball(question, apikey)
 API.Fun().advice(apikey)
 API.Fun().fortune(apikey)
 API.Fun().insults(apikey)
+```
+
+# 🎮 Valorant
+```js
+API.Valorant().userInfo(apikey, 'Example#0000') // { status: 200, data: [Object] }
 ```
 
 # ⚠️ Rate Limits <a name = "ratelimits"></a>
