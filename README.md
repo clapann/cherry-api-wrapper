@@ -7,7 +7,7 @@
 
 ---
 
-<p align="center"> 🤖 This node module is a wrapper for the ch$rry API.
+<p align="center"> 🤖 This node module is a wrapper for the [ch$rry API](https://api.cherrybot.xyz).
     <br> 
 </p>
 
@@ -31,50 +31,55 @@ You request a certain method from the module -> module interacts with https://ap
 
 ```js
 const API = require('cherry-api-wrapper')
-const apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+const apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-let eightball = await new API.Fun().eightball('Will i be successful?', apikey)
+let eightball = await new API.Fun().eightball('Will i be successful?', apiKey)
 console.log(eightball) // { status: 200, question: 'Will i be successful?', answer: 'Yes - definitely.' }
 
-let img = await new API.Images().blush(apikey)
+let img = await new API.Images().blush(apiKey)
 console.log(img) // { status: 200, image: 'https://cdn.cherrybot.xyz/images/blush/blush_38.gif', id: 38 }
 
-let data = await new API.Valorant().userInfo(apikey, 'Example#0000')
+let data = await new API.Valorant().userInfo(apiKey, 'Example#0000')
 console.log(data) // { status: 200, data: [Object] }
 ```
 
 ## 🔄 Methods <a name = "methods"></a>
 
-# 📷 Images
+### 📷 Images
 ```js
-API.Images().blush(apikey)
-API.Images().cry(apikey)
-API.Images().hug(apikey)
-API.Images().kiss(apikey)
-API.Images().pat(apikey)
-API.Images().punch(apikey)
-API.Images().slap(apikey)
+API.Images().blush(apiKey)
+API.Images().cry(apiKey)
+API.Images().hug(apiKey)
+API.Images().kiss(apiKey)
+API.Images().pat(apiKey)
+API.Images().punch(apiKey)
+API.Images().slap(apiKey)
 ```
 
-# 🧸 Fun
+### 🧸 Fun
 ```js
-API.Fun().eightball(question, apikey)
-API.Fun().advice(apikey)
-API.Fun().fortune(apikey)
-API.Fun().insults(apikey)
+API.Fun().eightball(apiKey, question)
+API.Fun().advice(apiKey)
+API.Fun().fortune(apiKey)
+API.Fun().insults(apiKey)
 ```
 
-# 🎮 Valorant
+### 🎮 Valorant
 ```js
-API.Valorant().userInfo(apikey, 'Example#0000') // { status: 200, data: [Object] }
+API.Valorant().userInfo(apiKey, 'Example#0000') // { status: 200, data: [Object] }
 ```
 
-# ⚠️ Rate Limits <a name = "ratelimits"></a>
+### 📱 Discord
+```js
+API.Discord().banner(apiKey, discordBotToken, discordUserID) // { status: 200, data: [Object] }
+```
+
+## ⚠️ Rate Limits <a name = "ratelimits"></a>
 
 The ch$rry API allows you to make a request per second to prevent spam. If you make a request while your on the 1 second rate limit it will return a 429 status code
 "The HTTP 429 Too Many Requests response status code indicates the user has sent too many requests in a given amount of time."
 
-# 🔒 API Keys <a name = "keys"></a>
+## 🔒 API Keys <a name = "keys"></a>
 
 To apply for a ch$rry API key join our Discord server (https://cherrybot.xyz/discord) and make a ticket explaining what you are using the API key for! (We are accepting easily and not being strict about it and youll probably get accepted within an hour or two.)
 

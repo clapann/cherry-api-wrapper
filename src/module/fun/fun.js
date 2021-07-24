@@ -2,7 +2,7 @@ const fetch = require(`node-fetch`);
 
 module.exports = class Fun {
 
-    async eightball(question, apikey) {
+    async eightball(apikey, question) {
         if(!question) {
             let message = {
                 "status": 400,
