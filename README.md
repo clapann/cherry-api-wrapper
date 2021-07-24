@@ -7,7 +7,7 @@
 
 ---
 
-<p align="center"> 🤖 This node module is a wrapper for the [ch$rry API](https://api.cherrybot.xyz).
+<p align="center"> 🤖 This node module is a wrapper for the ch$rry API.
     <br> 
 </p>
 
